@@ -5,7 +5,8 @@ import com.example.tamz2mar0906withoutcompose.Http.GroupResponseObject
 import com.example.tamz2mar0906withoutcompose.Http.UserInfoResponseObject
 import com.google.gson.Gson
 
-object StorageService{
+object StorageService {
+
     fun saveCurrentUser(context: Context, user: UserInfoResponseObject?) {
         val sharedPreferences = context.getSharedPreferences("UserStorage", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
@@ -19,8 +20,7 @@ object StorageService{
         val sharedPreferences = context.getSharedPreferences("UserStorage", Context.MODE_PRIVATE)
         val userJson = sharedPreferences.getString("currentUser", null)
 
-        val result = userJson?.let { Gson().fromJson(it, UserInfoResponseObject::class.java) }
-        return result
+        return userJson?.let { Gson().fromJson(it, UserInfoResponseObject::class.java) }
     }
 
     fun saveCurrentGroups(context: Context, groups: List<GroupResponseObject>?) {
@@ -39,6 +39,3 @@ object StorageService{
         return groupsJson?.let { Gson().fromJson(it, Array<GroupResponseObject>::class.java).toList() }
     }
 }
-
-
-

@@ -39,7 +39,7 @@ data class GroupResponseObject(
     val id: Int,
     val groupName: String,
     val groupCreator: String,
-    val users: List<UserInfoResponseObject>?
+    val users: MutableList<UserInfoResponseObject>?
 )
 
 data class GroupResponse(
@@ -49,6 +49,32 @@ data class GroupResponse(
 )
 
 data class GeneralResponse(
+    val message: String,
+    val success: Boolean
+)
+
+data class EventRequest(
+    val groupId: Int,
+    val creatorId: Int,
+    val eventName: String,
+    val eventDate: String,
+    val location: String,
+    val accommodationProvided: Int,
+    val description: String? = null
+)
+
+data class EventResponseModel(
+    val groupId: Int,
+    val creatorId: Int,
+    val eventName: String,
+    val eventDate: String,
+    val location: String,
+    val accommodationProvided: Int,
+    val description: String? = null
+)
+
+data class EventResponse(
+    val events: List<EventResponseModel>?,
     val message: String,
     val success: Boolean
 )
@@ -81,4 +107,23 @@ interface IApiClient {
     @Headers("Content-Type: application/json")
     @GET("getUsersByLoginLike")
     fun searchUsers(@Query("login") login: String): Call<UserInfoResponse>
+
+    @Headers("Content-Type: application/json")
+    @PUT("insertUserToGroup")
+    fun insertUserToGroup(
+        @Query("group_id") groupId: String,
+        @Query("user_id") userId: String
+    ): Call<GeneralResponse>
+
+    @Headers("Content-Type: application/json")
+    @POST("insertEvent")
+    fun insertEvent(@Body request: EventRequest): Call<GeneralResponse>
+
+    @Headers("Content-Type: application/json")
+    @POST("updateEvent")
+    fun updateEvent(@Body request: EventRequest): Call<GeneralResponse>
+
+    @Headers("Content-Type: application/json")
+    @GET("getEventsByGroup")
+    fun getEventsByGroup(@Query("group_id") groupId: Int): Call<EventResponse>
 }

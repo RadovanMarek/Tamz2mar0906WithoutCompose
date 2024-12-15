@@ -21,8 +21,11 @@
     <string name="btn_add_user_to_group">Přidat uživatele do skupiny</string>
     <string name="btn_remove_user_from_group">Odstranit uživatele ze skupiny</string>
     <string name="not_found_any_users">Nenalezení žádní uživatelé</string>
-
-
+    <string name="btn_add_to_group">Přidat</string>
+    <string name="search_user_hint">Hledat uživatele podle jména</string>
+    <string name="btn_confirm_create_group">Potvrdit vytvoření skupiny</string>
+    <string name="user_added_successfully">Uživatel byl úspěšně přidán do skupiny.</string>
+    <string name="error_adding_user_to_group">Uživatel byl již přidán</string>
     <string name="group_length_error">"Skupina nemůže mít více jak 50 znaků"</string>
     <string name="load_photo_error">Nepodařilo se načíst profilový obrázek.</string>
     <string name="error_user_already_exists">Uživatelské jméno již bylo zabráno.</string>
@@ -36,6 +39,20 @@
     <string name="unexpected_error">Neočekávaná chyba: %1$s</string>
     <string name="error_user_not_found">Nenalezen žádný uživatel.</string>
     <string name="http_error">HTTP chyba: %1$d - %2$s</string>
+    <string name="event_created_successfully">Událost "%1$s" byla úspěšně vytvořena.</string>
+    <string name="error_creating_event">Chyba při vytváření události</string>
+    <string name="event_updated_successfully">Událost "%1$s" byla úspěšně aktualizována.</string>
+    <string name="event_date_button_hint">Vyberte datum a čas</string>
+    <string name="event_date_selected">Vybrané datum: %1$s</string>
+    <string name="event_details">Detaily událostí</string>
+    <string name="error_updating_event">Chyba při aktualizaci události: %1$s</string>
+    <string name="error_loading_events">Chyba při načítání událostí: %1$s</string>
+    <string name="event_name_hint">Název události</string>
+    <string name="event_date_hint">Datum události (YYYY-MM-DD HH:MM)</string>
+    <string name="event_location_hint">Místo konání</string>
+    <string name="event_description_hint">Popis události</string>
+    <string name="event_accommodation_hint">Zajištění ubytování</string>
+    <string name="confirm_create_event_button">Vytvořit událost</string>
 
     <string-array name="gender_options">
         <item>Muž</item>
