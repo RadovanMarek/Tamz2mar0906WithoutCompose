@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">Tamz2mar0906WithoutCompose</string>
+    <string name="login_title">Přihlášení</string>
+    <string name="username_hint">Uživatelské jméno</string>
+    <string name="password_hint">Heslo</string>
+    <string name="login_button_text">Přihlásit se</string>
+    <string name="register_title">Registrace</string>
+    <string name="phone_number_hint">Telefonní číslo</string>
+    <string name="gender_hint">Pohlaví</string>
+    <string name="upload_photo_button_text">Nahrát fotografii</string>
+    <string name="register_button_text">Registrovat se</string>
+    <string name="register_link_text">Registrovat se?</string>
+    <string name="singup_link_text">Přihlásit se?</string>
+    <string name="add_event">Přidat událost</string>
+    <string name="create_group_dialog_title">Vytvořit novou skupinu</string>
+    <string name="create_group_hint">Zadejte název skupiny</string>
+    <string name="create_group_positive_button">Vytvořit</string>
+    <string name="create_group_negative_button">Zrušit</string>
+    <string name="btn_create_event">Vytvořit událost</string>
+    <string name="btn_create_group">Vytvořit skupinu</string>
+    <string name="btn_add_user_to_group">Přidat uživatele do skupiny</string>
+    <string name="btn_remove_user_from_group">Odstranit uživatele ze skupiny</string>
+    <string name="not_found_any_users">Nenalezení žádní uživatelé</string>
+
+
+    <string name="group_length_error">"Skupina nemůže mít více jak 50 znaků"</string>
+    <string name="load_photo_error">Nepodařilo se načíst profilový obrázek.</string>
+    <string name="error_user_already_exists">Uživatelské jméno již bylo zabráno.</string>
+    <string name="create_group_error_empty_name">Název skupiny musí být vyplněn</string>
+    <string name="error_loading_groups">Chyba při načítání skupin: %1$s</string>
+    <string name="group_created_successfully">Skupina "%1$s" byla úspěšně vytvořena!</string>
+    <string name="error_creating_group">Chyba při vytváření skupiny: %1$s</string>
+    <string name="user_removed_successfully">Uživatel byl úspěšně odebrán.</string>
+    <string name="error_removing_user">Chyba při odebírání uživatele: %1$s</string>
+    <string name="error_searching_users">Chyba při vyhledávání uživatelů: %1$s</string>
+    <string name="unexpected_error">Neočekávaná chyba: %1$s</string>
+    <string name="error_user_not_found">Nenalezen žádný uživatel.</string>
+    <string name="http_error">HTTP chyba: %1$d - %2$s</string>
+
+    <string-array name="gender_options">
+        <item>Muž</item>
+        <item>Žena</item>
+        <item>Jiné</item>
+    </string-array>
 </resources>

@@ -3,6 +3,8 @@
     <style name="Base.Theme.Tamz2mar0906WithoutCompose" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/purple_700</item>
+        <item name="colorOnPrimary">@android:color/black</item>
     </style>
 
     <style name="Theme.Tamz2mar0906WithoutCompose" parent="Base.Theme.Tamz2mar0906WithoutCompose" />
