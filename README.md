@@ -6,7 +6,7 @@ A mobile app for organizing and planning events with friends.
 
 - Group creation and management.
 - Event planning with details (date, location, etc.).
-- View upcoming and past events in a calendar or list.
+- View upcoming and past events in a list.
 
 ## Prerequisites
 
@@ -16,6 +16,5 @@ A mobile app for organizing and planning events with friends.
 ## Setup
 
 1. Clone the repository.
-2. Set up the backend by following its instructions.
-3. Initialize the database with `tamz_init_script.sql`.
-4. Build and run the mobile app.
+2. Initialize the database with `tamz_init_script.sql`.
+3. Build and run the mobile app.
