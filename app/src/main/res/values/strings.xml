@@ -45,6 +45,7 @@
     <string name="event_date_button_hint">Vyberte datum a čas</string>
     <string name="event_date_selected">Vybrané datum: %1$s</string>
     <string name="event_details">Detaily událostí</string>
+    <string name="no_events_found">Pro vybrané datum nejsou žádné události.</string>
     <string name="error_updating_event">Chyba při aktualizaci události: %1$s</string>
     <string name="error_loading_events">Chyba při načítání událostí: %1$s</string>
     <string name="event_name_hint">Název události</string>
