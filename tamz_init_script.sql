@@ -11,5 +11,30 @@ CREATE TABLE [dbo].[Users] (
 CREATE TABLE [dbo].[Groups] (
     [Id]        INT          IDENTITY (1, 1) NOT NULL,
     [GroupName] VARCHAR (50) NOT NULL,
-    CONSTRAINT [PK_NewTable] PRIMARY KEY CLUSTERED ([Id] ASC, [GroupName] ASC)
+    [GroupCreator] VARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_Groups] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+CREATE TABLE [dbo].[GroupsUsers] (
+    [Id]     INT IDENTITY (1, 1) NOT NULL,
+    [GroupId] INT NOT NULL,
+    [UserId]  INT NOT NULL,
+    CONSTRAINT [PK_GroupsUsers] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_GroupsUsers_Groups] FOREIGN KEY ([GroupId]) REFERENCES [dbo].[Groups] ([Id]),
+    CONSTRAINT [FK_GroupsUsers_Users] FOREIGN KEY ([UserId]) REFERENCES [dbo].[Users] ([Id])
+);
+
+CREATE TABLE [dbo].[Events] (
+    [Id]           INT             IDENTITY (1, 1) NOT NULL,
+    [GroupId]      INT             NOT NULL,
+    [CreatorId]    INT             NOT NULL,
+    [EventName]    VARCHAR (100)   NOT NULL, 
+    [EventDate]    DATETIME        NOT NULL,
+    [Location]     VARCHAR (200)   NOT NULL,
+    [AccommodationProvided] BIT    NOT NULL DEFAULT 0,
+    [Description]  VARCHAR (MAX)   NULL, 
+    CONSTRAINT [PK_Events] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Events_Groups] FOREIGN KEY ([GroupId]) REFERENCES [dbo].[Groups] ([Id]),
+    CONSTRAINT [FK_Events_Users] FOREIGN KEY ([CreatorId]) REFERENCES [dbo].[Users] ([Id])
+);
+
